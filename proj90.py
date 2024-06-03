@@ -53,6 +53,7 @@ def draw_landmarks(image, results):
 
 def draw_styled_landmarks(image, results):
     # Draw face connections
+    #help me
     mp_drawing.draw_landmarks(image, results.face_landmarks, mp_holistic.FACEMESH_TESSELATION,
                               mp_drawing.DrawingSpec(
                                   color=(80, 110, 10), thickness=1, circle_radius=1),
@@ -113,7 +114,6 @@ def prob_viz(res, actions, input_frame, colors):
 
 st.title('Sign Language Translator')
 st.sidebar.title('Sign Language Translator')
-# st.sidebar.subheader('parameters')
 # @st.cache()
 detection_type = st.sidebar.selectbox(
     'Choose the App mode', ['About APP', 'Real Time Translation'])
@@ -201,3 +201,4 @@ elif detection_type == "Real Time Translation":
             #         break
         cap.release()
         cv2.destroyAllWindows()
+        
